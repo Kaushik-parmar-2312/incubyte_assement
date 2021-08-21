@@ -48,4 +48,18 @@ public class TestCalculator {
 	    {
 	        assertEquals(2, StringCalculator.Add("1000,2"));
 	    }
+	    
+	    @Test
+	    public void testNegativeNumber()
+	    {
+	        try
+	        {
+	            StringCalculator.Add("-3,6");
+	        }
+	        catch (IllegalArgumentException e){
+	            assertEquals(e.getMessage(), "Negative not allowed: -3");
+	        }
+	    }
+
 }
+
