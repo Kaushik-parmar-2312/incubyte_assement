@@ -32,4 +32,20 @@ public class TestCalculator {
 	        assertEquals(6, StringCalculator.Add("1,2,3"));
 	    }
 
+	    @Test
+	    public void testNewLine()
+	    {
+	    	assertEquals(6, StringCalculator.Add("1\n2,3"));
+	    }
+	    @Test
+	    public void otherDelimiter()
+	    {
+	        assertEquals(3, StringCalculator.Add("//;\n1;2"));
+	    }
+	    
+	    @Test
+	    public void overThousand()
+	    {
+	        assertEquals(2, StringCalculator.Add("1000,2"));
+	    }
 }
